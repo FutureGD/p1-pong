@@ -9,6 +9,7 @@ TagManager:
   - Paddle
   - LeftGoal
   - RightGoal
+  - AI
   layers:
   - Default
   - TransparentFX
