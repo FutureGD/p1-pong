@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BallController : MonoBehaviour
@@ -57,11 +56,13 @@ public class BallController : MonoBehaviour
             // Debug.Log("Paddle Hit");
             rb.linearVelocity *= (speed + 0.2f) / speed;
             speed += 0.2f;
+            AudioManager.Instance.Play(AudioManager.SoundClip.PaddleBounce);
             OnPaddleHit?.Invoke();
         }
         else if (other.gameObject.CompareTag("Wall"))
         {
             // Debug.Log("Wall Bounce");
+            AudioManager.Instance.Play(AudioManager.SoundClip.WallBounce);
             OnWallHit?.Invoke();
         }
     }
@@ -77,8 +78,8 @@ public class BallController : MonoBehaviour
     IEnumerator WaitAndResetPosition(int n)
     {
         isResetting = true;
-        transform.position = Vector3.zero;
         rb.linearVelocity = Vector2.zero;
+        transform.position = Vector3.zero;
         yield return new WaitForSeconds(n);
         speed = startingSpeed;
         // StartCoroutine("Wait", 3);

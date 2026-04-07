@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null || Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    void Play(SoundClip clipName)
+    public void Play(SoundClip clipName)
     {
         AudioClip clip = null;
         switch (clipName)
