@@ -39,13 +39,13 @@ public class ScoreManager : MonoBehaviour
             p2Score += 1;
         else if (goal.CompareTag("RightGoal"))
             p1Score += 1;
-        Debug.Log($"{p1Score}\t\t{p2Score}");
+        // Debug.Log($"{p1Score}\t\t{p2Score}");
         if (p1Score == winScore || p2Score == winScore)
         {
             AudioManager.Instance.Play(AudioManager.SoundClip.Win);
             int winner = (p1Score > p2Score) ? 1 : 2; // 1 -> player1, 2 -> player2
             OnWin?.Invoke(winner);
-            Debug.Log($"Player {winner} Wins!");
+            // Debug.Log($"Player {winner} Wins!");
             p1Score = 0;
             p2Score = 0;
         }

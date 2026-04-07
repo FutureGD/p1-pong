@@ -687,7 +687,6 @@ GameObject:
   - component: {fileID: 366144440}
   - component: {fileID: 366144439}
   - component: {fileID: 366144443}
-  - component: {fileID: 366144444}
   m_Layer: 0
   m_Name: Paddle_2
   m_TagString: Paddle
@@ -854,26 +853,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e817ca57f20f8489b266c798ea8891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIPaddle
-  speed: 5
+  speed: 7
   topBound: 4
   bottomBound: -4
   ball: {fileID: 1013097981}
---- !u!114 &366144444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 366144438}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea15f4ef4c5d844c9a07002e22c6785, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PaddleController
-  speed: 5
-  topBound: 4
-  bottomBound: -4
-  _moveInput: 0
 --- !u!1 &412878331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2869,7 +2852,6 @@ GameObject:
   - component: {fileID: 1133287726}
   - component: {fileID: 1133287729}
   - component: {fileID: 1133287730}
-  - component: {fileID: 1133287731}
   m_Layer: 0
   m_Name: Paddle_1
   m_TagString: Paddle
@@ -3036,26 +3018,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea15f4ef4c5d844c9a07002e22c6785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaddleController
-  speed: 8
+  speed: 12
   topBound: 4
   bottomBound: -4
   _moveInput: 0
---- !u!114 &1133287731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133287725}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e817ca57f20f8489b266c798ea8891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AIPaddle
-  speed: 7
-  topBound: 4
-  bottomBound: -4
-  ball: {fileID: 1013097981}
 --- !u!1 &1282840751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,7 +3252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1701032825
 RectTransform:
   m_ObjectHideFlags: 0
