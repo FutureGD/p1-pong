@@ -13,3 +13,6 @@ Its the first part of the warm-up project series. Pong
 - Coroutines for timed sequences
 - Singleton pattern for GameManager and AudioManager
 - Separating concernes across Manager scripts
+
+## Play
+[Download v1.0](https://github.com/FutureGD/p1-pong/releases/download/v1.0/pong_v1.0.zip)
