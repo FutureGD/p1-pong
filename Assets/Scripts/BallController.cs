@@ -82,7 +82,6 @@ public class BallController : MonoBehaviour
         transform.position = Vector3.zero;
         yield return new WaitForSeconds(n);
         speed = startingSpeed;
-        // StartCoroutine("Wait", 3);
         AddStartingSpeed();
         isResetting = false;
     }

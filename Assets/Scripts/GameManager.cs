@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         TransitionTo(State.Menu);
+        Time.timeScale = 0f;
     }
 
     public void TransitionTo(State newState)
@@ -37,8 +38,6 @@ public class GameManager : MonoBehaviour
         CurrentState = newState;
         OnStateChange?.Invoke(newState);
 
-
-        // NO NEED!!!
         switch (newState)
         {
             case State.Menu: MenuBehaviour(); break;
@@ -50,7 +49,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // NO NEED!!!
     void MenuBehaviour()
     {
         Time.timeScale = 0f;
@@ -76,9 +74,3 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 }
-
-
-// Why Not needed:
-// All the state logics are done inside the class responsible for their states, no need to implement
-// those logics here each class will handle them all based on just the current state that this will 
-// let them know using event.
